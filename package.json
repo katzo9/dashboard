@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "gulp build"
+    "heroku-postbuild": "gulp build",
+    "start-server": "DEV=true babel-node --presets es2015 backend/app.js"
   },
   "author": "Stellar.org",
   "dependencies": {
