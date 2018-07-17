@@ -32,6 +32,10 @@ export default class NetworkStatus extends React.Component {
     axios.get(`${this.props.horizonURL}/ledgers?order=desc&limit=${ledgersInAverageCalculation}`)
       .then(response => {
         let ledger = response.data._embedded.records[0];
+        if(!ledger){
+          console.log("no ledger");
+          return
+        }
         let lastLedgerSequence = ledger.sequence;
         let prevLedger = response.data._embedded.records[1];
         let closedAt = new Date(ledger.closed_at);
