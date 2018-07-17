@@ -21,7 +21,7 @@ import TotalCoins from './TotalCoins';
 import TransactionsChart from './TransactionsChart';
 import {LIVE_NEW_LEDGER, TEST_NEW_LEDGER} from '../events';
 
-const horizonLive = "https://horizon-mon.stellar-ops.com";
+const horizonLive = "http://192.168.98.127:8000";
 const horizonTest = "https://horizon-testnet.stellar.org";
 
 export default class App extends React.Component {
